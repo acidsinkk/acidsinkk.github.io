@@ -2,9 +2,38 @@
 <html>
 <head>
   <style>
-    .form {
+    @font-face {
+      font-family: 'Open Sans';
+      src: url('./fonts/opensanslight.ttf');
+    }
+    body { 
+      font-family: 'Open Sans', sans-serif;
+      background-color: #F9F9F9;
+      margin: 0;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    .container {
+      max-width: 800px;
+      height: 100vh;
+      background-color: white;
       display: flex;
       flex-direction: column;
+      margin: auto;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+    }
+    .form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
     }
     .button_size_m {
     font-size: 15px;
@@ -17,25 +46,30 @@
       width: 160px;
       height: 38px;
     }
-
   </style>
 </head>
 <body>
 
-  <button id="add" class="button button_size_m border">Добавить человека</button>
-  <button id="remove" class="button button_size_m border">Удалить человека</button>
-  <form id="form" class="form border">
-    <div class="border">
-      <label>Скидка, % <input name="discount" type="number" ></label>
-      <label>Доставка, руб. <input name="shipping" type="number"></label>
+  <div class="container">
+    <h1>Ну как там с деньгами?</h1>
+
+    <div class="controls">
+      <button id="add" class="button button_size_m border">Добавить человека</button>
+      <button id="remove" class="button button_size_m border">Удалить человека</button>
     </div>
-    <div id="persons"></div>
-    <button class="button button_size_m">Посчитать</button>
-  </form>
-  
 
-  <div id="result"></div>
-
+    <form id="form" class="form border">
+      <div class="border">
+        <label>Скидка, % <input name="discount" type="number" ></label>
+        <label>Доставка, руб. <input name="shipping" type="number"></label>
+      </div>
+      <div id="persons"></div>
+      <button class="button button_size_m">Посчитать</button>
+    </form>
+    
+    <div id="result"></div>
+  </div>
+ 
   <script src="./function/getMoney.js"></script>
   <script src="./function/front.js"></script>
 </body>
