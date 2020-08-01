@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+    .button_size_m {
+    font-size: 15px;
+    line-height: 32px;
+    }
+    .border {
+      margin-bottom: 20px;
+    }
+    button {
+      width: 160px;
+      height: 38px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <button id="add" class="button button_size_m border">Добавить человека</button>
+  <button id="remove" class="button button_size_m border">Удалить человека</button>
+  <form id="form" class="form border">
+    <div class="border">
+      <label>Скидка, % <input name="discount" type="number" ></label>
+      <label>Доставка, руб. <input name="shipping" type="number"></label>
+    </div>
+    <div id="persons"></div>
+    <button class="button button_size_m">Посчитать</button>
+  </form>
+  
+
+  <div id="result"></div>
+
+  <script src="./function/getMoney.js"></script>
+  <script src="./function/front.js"></script>
+</body>
+
+</html>
